@@ -1,0 +1,49 @@
+:root {
+    /* Colors */
+    --primary-color: #4a90e2;  /* Calming blue */
+    --secondary-color: #28a745;
+    --danger-color: #dc3545;
+    --neutral-color: #aaa;
+    --background-gradient-start: #f0f8ff; /* Alice blue */
+    --background-gradient-end: #e6f3ff;   /* Lighter blue */
+
+    --text-primary: #2c3e50;
+    --text-secondary: #34495e;
+    --accent-light: #ecf0f1;
+    --accent-dark: #bdc3c7;
+
+    /* Typography */
+    --font-family-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    --font-family-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 20px;
+
+    /* Box Shadows */
+    --shadow-card: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+    /* Transitions */
+    --transition-speed: 0.3s;
+
+    /* Container Widths */
+    --container-max-width: 800px;
+
+    /* Z-index levels */
+    --z-index-particles: 0;
+    --z-index-base: 1;
+    --z-index-content: 2;
+    --z-index-navbar: 3;
+    --z-index-modal: 4;
+    --z-index-tooltip: 5;
+    --z-index-loading: 9999;
+}

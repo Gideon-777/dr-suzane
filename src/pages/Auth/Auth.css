@@ -1,0 +1,252 @@
+/* src/pages/Auth/Auth.css */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: var(--spacing-xl);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    width: 100%;
+    max-width: 400px;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.3s ease;
+}
+
+.auth-card:hover {
+    transform: translateY(-5px);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.auth-header h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.auth-header p {
+    color: var(--neutral-color);
+    font-size: 0.9rem;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 2px solid var(--neutral-color);
+    border-radius: var(--border-radius-md);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 85, 170, 0.1);
+}
+
+.auth-button {
+    width: 100%;
+    padding: var(--spacing-md);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #004a94;
+    transform: translateY(-2px);
+}
+
+.auth-button:disabled {
+    background-color: var(--neutral-color);
+    cursor: not-allowed;
+    transform: none;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.auth-footer a:hover {
+    color: #004a94;
+}
+
+.message {
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    animation: slideDown 0.3s ease;
+}
+
+.message.error {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--danger-color);
+    border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+.message.success {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--secondary-color);
+    border: 1px solid rgba(40, 167, 69, 0.2);
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.password-input-wrapper {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--neutral-color);
+    cursor: pointer;
+    padding: var(--spacing-xs);
+}
+
+.password-toggle:hover {
+    color: var(--primary-color);
+}
+
+/* Add to src/pages/Auth/Auth.css */
+
+.button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.auth-button {
+    position: relative;
+    width: 100%;
+    padding: var(--spacing-md);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.auth-button:disabled {
+    background-color: var(--neutral-color);
+    cursor: not-allowed;
+}
+
+.auth-button .spinner-container {
+    margin-right: var(--spacing-xs);
+}
+
+/* Ensure the loading spinner and text are properly centered */
+.spinner-container.small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adjust the loading text alignment */
+.button-content span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Add to src/pages/Auth/Auth.css */
+.password-mismatch {
+    color: var(--danger-color);
+    font-size: 0.8rem;
+    margin-top: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.password-mismatch::before {
+    content: "⚠️";
+}
+
+.password-input-wrapper {
+    position: relative;
+    margin-bottom: var(--spacing-xs);
+}
+
+.forgot-password-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color var(--transition-speed);
+}
+
+.forgot-password-link:hover {
+    color: #004a94;
+    text-decoration: underline;
+}
+
+.password-requirements {
+    font-size: 0.8rem;
+    color: var(--neutral-color);
+    margin-top: var(--spacing-xs);
+}
+
+.password-match-indicator {
+    font-size: 0.8rem;
+    margin-top: var(--spacing-xs);
+}
+
+.password-match-indicator.match {
+    color: var(--secondary-color);
+}
+
+.password-match-indicator.mismatch {
+    color: var(--danger-color);
+}
